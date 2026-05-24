@@ -36,3 +36,36 @@ TIPS, LIPS, 소셜벤처판별, 최근 뉴스
 - Anthropic Claude API
 - Slack SDK
 - Airtable API
+- Schedule (자동 실행)
+
+## 설치 방법
+
+```bash
+pip install google-auth google-auth-oauthlib google-api-python-client anthropic slack-sdk pyairtable schedule
+```
+
+## 실행 방법
+
+```bash
+# 1회 실행
+python dealflow_agent.py --once
+
+# 매일 09:00 자동 실행
+python dealflow_agent.py
+```
+
+## 폴더 구조
+
+dealflow/
+├── dealflow_agent.py    # 메인 에이전트
+├── credentials.json     # Google OAuth (비공개)
+├── token.json          # Gmail 인증 토큰 (비공개)
+└── processed_ids.json  # 처리된 이메일 추적
+
+## 주의사항
+
+⚠️ AI 1차 분류 결과입니다. 경계선 딜은 심사역 최종 판단이 필요합니다.
+
+## 개발
+
+MYSC 에이블(김정태) × Claude (Anthropic)
